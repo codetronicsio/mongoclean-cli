@@ -34,7 +34,15 @@ A simple way to use it is to call it in your test script before running the actu
     "test": "cp .env.test .env && mongoclean-cli && mocha"
   },
 ```
-
+or
+```json
+  "scripts": {
+    "test": "mongoclean-cli -h mongodb://my-mongodb-host -p 1234 -d testdb && mocha"
+  },
+```
 ## License
 
 MIT
+
+### PR && Issues
+... are welcome
