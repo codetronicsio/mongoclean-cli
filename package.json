@@ -1,6 +1,6 @@
 {
   "name": "mongoclean-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A KISS cli to clean a mongodb",
   "main": "mongoclean-cli.js",
   "bin": {
