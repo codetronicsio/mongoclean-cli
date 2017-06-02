@@ -1,7 +1,7 @@
 mongoclean-cli 
 ==============
 
-[![Build Status](https://travis-ci.org/codetronicsio/mongoclean-cli.svg?branch=master)](https://travis-ci.org/codetronicsio/mongoclean-cli)
+[![npm version](https://badge.fury.io/js/mongoclean-cli.svg)](https://badge.fury.io/js/mongoclean-cli) [![Build Status](https://travis-ci.org/codetronicsio/mongoclean-cli.svg?branch=master)](https://travis-ci.org/codetronicsio/mongoclean-cli) [![Code Climate](https://codeclimate.com/github/codetronicsio/mongoclean-cli/badges/gpa.svg)](https://codeclimate.com/github/codetronicsio/mongoclean-cli) 
 
 
 Clean all the collections in a mongo database thru the CLI.
@@ -27,6 +27,8 @@ Options:
   -h, --help             Display help and usage details
 ```
 It uses *dotenv*, so be careful if you have a *.env* file in your _PATH_
+
+
 
 ## License
 
