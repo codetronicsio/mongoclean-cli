@@ -25,7 +25,6 @@ cli.parse({
 function sanitizeParameters(url, port, db) {
   var connection = url + ':' + port + '/' + db;
   var p = urlParser.parse(connection);
-  console.log(p);
 
   if (!p.hostname || !p.port || !p.path) {
     throw new Error('Invalid connection string. Check your parameters');
@@ -35,9 +34,9 @@ function sanitizeParameters(url, port, db) {
 }
 
 cli.main(function(args, options) {
-  var url = options.url || process.env.MONGO_HOST;
-  var port = options.port || process.env.MONGO_PORT;
-  var db = options.db || process.env.MONGO_NAME;
+  var url = process.env.MONGO_HOST || options.url;
+  var port = process.env.MONGO_PORT || options.port;
+  var db = process.env.MONGO_NAME || options.db;
 
   var connectionString = sanitizeParameters(url, port, db);
 
