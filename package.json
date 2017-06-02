@@ -1,0 +1,38 @@
+{
+  "name": "mongoclean-cli",
+  "version": "0.0.1",
+  "description": "A KISS cli to clean a mongodb",
+  "main": "mongoclean-cli.js",
+  "bin": {
+    "mongoclean-cli": "./mongoclean-cli.js"
+  },
+  "scripts": {
+    "test": "ENV=test mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codetronicsio/mongoclean-cli.git"
+  },
+  "keywords": [
+    "mongo",
+    "mongodb",
+    "clean",
+    "test"
+  ],
+  "author": "codetronics",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codetronicsio/mongoclean-cli/issues"
+  },
+  "homepage": "https://github.com/codetronicsio/mongoclean-cli#readme",
+  "dependencies": {
+    "cli": "^1.0.1",
+    "dotenv": "^4.0.0",
+    "mongo-clean": "^1.2.2",
+    "mongodb": "^2.2.28"
+  },
+  "devDependencies": {
+    "mocha": "^3.4.2",
+    "mongo-mock": "^2.4.0"
+  }
+}
