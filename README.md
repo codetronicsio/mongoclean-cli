@@ -26,9 +26,14 @@ Options:
   -d, --db [STRING]      The name for the DB || MONGO_NAME env (Default is test)
   -h, --help             Display help and usage details
 ```
-It uses *dotenv*, so be careful if you have a *.env* file in your _PATH_
+It uses *dotenv*, so be careful if you have a *.env* file in your current working directory (_${PWD}_)
 
-
+A simple way to use it is to call it in your test script before running the actual test tool.
+```json
+  "scripts": {
+    "test": "cp .env.test .env && mongoclean-cli && mocha"
+  },
+```
 
 ## License
 
