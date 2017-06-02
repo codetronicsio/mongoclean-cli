@@ -32,7 +32,6 @@
     "mongodb": "^2.2.28"
   },
   "devDependencies": {
-    "mocha": "^3.4.2",
-    "mongo-mock": "^2.4.0"
+    "mocha": "^3.4.2"
   }
 }

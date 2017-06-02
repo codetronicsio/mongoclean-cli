@@ -1,8 +1,6 @@
 'use strict';
 var cli = require('cli');
-var mongodb = process.ENV === 'test'
-  ? require('mongo-mock')
-  : require('mongodb');
+var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
 var clean = require('mongo-clean');
 var urlParser = require('url');
