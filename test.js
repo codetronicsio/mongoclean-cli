@@ -4,14 +4,14 @@ var exec = require('child_process').exec;
 describe('MongoDB Clean', function() {
   describe('CLI', function() {
     it('should work without parameters', function(done) {
-      var cmd = 'node index.js';
+      var cmd = 'node mongoclean-cli.js';
       exec(cmd, function(error, stdout, stderr) {
         done(error);
       });
     });
 
     it('should show help', function(done) {
-      var cmd = 'node index.js -h';
+      var cmd = 'node mongoclean-cli.js -h';
       exec(cmd, function(error, stdout, stderr) {
         assert.equal(17, stderr.indexOf('mongoclean-cli'));
         done(error);
@@ -20,7 +20,7 @@ describe('MongoDB Clean', function() {
   });
 
   it('should fail for unknown parameter', function(done) {
-    var cmd = 'node index.js -a';
+    var cmd = 'node mongoclean-cli.js -a';
     exec(cmd, function(error, stdout, stderr) {
       assert.equal('\u001b[31mERROR\u001b[0m: Unknown option -a\n', stderr);
       done();
