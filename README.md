@@ -1,5 +1,6 @@
 mongoclean-cli 
 ==============
+[![NPM](https://nodei.co/npm/mongoclean-cli.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/mongoclean-cli/)
 
 [![npm version](https://badge.fury.io/js/mongoclean-cli.svg)](https://badge.fury.io/js/mongoclean-cli) [![Build Status](https://travis-ci.org/codetronicsio/mongoclean-cli.svg?branch=master)](https://travis-ci.org/codetronicsio/mongoclean-cli) [![Code Climate](https://codeclimate.com/github/codetronicsio/mongoclean-cli/badges/gpa.svg)](https://codeclimate.com/github/codetronicsio/mongoclean-cli) 
 
