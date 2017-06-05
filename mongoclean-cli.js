@@ -12,18 +12,24 @@ var pjson = require('./package.json');
 cli.setApp(pjson.name, pjson.version);
 
 cli.parse({
+  mongo: [
+    'm',
+    'The full connection string to the mongoDB || MONGO env',
+    'string',
+    'mongodb://localhost:27017/test'
+  ],
   url: [
     'u',
-    'The URL for the mongoDB || MONGO_HOST env',
+    'The hostname for the mongoDB || MONGO_HOST env',
     'string',
-    'mongodb://localhost'
+    'localhost'
   ],
   port: ['p', 'The PORT for the mongoDB || MONGO_PORT env', 'int', '27017'],
   db: ['d', 'The name for the DB || MONGO_NAME env', 'string', 'test']
 });
 
-function sanitizeParameters(url, port, db) {
-  var connection = url + ':' + port + '/' + db;
+function sanitizeParameters(host, port, db, mongo) {
+  var connection = mongo ? mongo : host + ':' + port + '/' + db;
   var p = urlParser.parse(connection);
 
   if (!p.hostname || !p.port || !p.path) {
@@ -34,11 +40,12 @@ function sanitizeParameters(url, port, db) {
 }
 
 cli.main(function(args, options) {
+  var mongo = process.env.MONGO || options.mongo;
   var url = process.env.MONGO_HOST || options.url;
   var port = process.env.MONGO_PORT || options.port;
   var db = process.env.MONGO_NAME || options.db;
 
-  var connectionString = sanitizeParameters(url, port, db);
+  var connectionString = sanitizeParameters(url, port, db, mongo);
 
   console.log('Cleanning "' + connectionString + '"');
 
