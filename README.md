@@ -1,4 +1,4 @@
-mongoclean-cli 
+mongoclean-cli
 ==============
 [![NPM](https://nodei.co/npm/mongoclean-cli.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/mongoclean-cli/)
 
@@ -22,6 +22,7 @@ Usage:
   mongoclean-cli [OPTIONS] [ARGS]
 
 Options:
+  -m, --mongo [STRING]   The full connection string to the mongoDB || MONGO env  (Default is mongodb://localhost:27017/test)
   -u, --url [STRING]     The URL for the mongoDB || MONGO_HOST env (Default is mongodb://localhost)
   -p, --port [NUMBER]    The PORT for the mongoDB || MONGO_PORT env (Default is 27017)
   -d, --db [STRING]      The name for the DB || MONGO_NAME env (Default is test)
